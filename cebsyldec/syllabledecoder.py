@@ -17,6 +17,7 @@ def get_CV_sequence(word):
             continue    
         elif prev_cons=="n" and char=="g":
             cv_seq += "C"
+            prev_cons="ng"
             skip=True
         elif prev_cons and char in vowels:
             cv_seq += "CV"
@@ -32,7 +33,7 @@ def get_CV_sequence(word):
         else:
             prev_cons = char
     
-    if prev_cons:
+    if prev_cons and prev_cons!="ng":
         cv_seq += "C"
     
     return cv_seq
