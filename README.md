@@ -1,5 +1,5 @@
 # Cebuano-Syllable-Decoder
-Cebuano Syllable-Decoder
+Cebuano Syllable Decoder
 
 ## Installation
 * `pip install cebsyldec` or
@@ -9,24 +9,36 @@ Cebuano Syllable-Decoder
 * `python>=2.7`
 
 ## Functions
-* syllabicate(word='')
+* get_syllables(word)
    - Accepts a Cebuano word and returns the syllables of the word
    - Default Output: List of syllables
+   - Ex. get_syllables("nangaon")
       ```
-        VC+CVC etc.
+        ['na', 'nga', 'on']
       ```
-   
+* get_syllable_sequence(word)
+   - Accepts a Cebuano word and returns the syllable sequence of the word
+   - Default Output: Syllable sequence of the word
+   - Ex. get_syllable_sequence("nangaon")
+      ```
+        'CV-CV-VC'
+      ```   
 ## How to Use
 ```
-from cebsyllabicator import syllabicator
+from cebsyldec import syllabledecoder
 
-syllabicator.syllabicate('kaonon')
+syllabledecoder.get_syllables("nangaon")
 
 Output: 
-   ka + o + non
-   CV + V + CVC
+   ['na', 'nga', 'on']
+
+
+syllabledecoder.get_syllable_sequence("nangaon")
+
+Output:
+   'CV + V + CVC'
+```
 
 ## References
 
 * https://www.youtube.com/watch?v=ZULS0evRLHg
-
