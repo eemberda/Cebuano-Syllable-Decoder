@@ -12,30 +12,21 @@ def get_CV_sequence(word):
     for char in word:
         if char not in vowels and char not in consonants:
             continue
-        elif skip:
-            skip=False
-            continue    
         elif prev_cons=="n" and char=="g":
-            cv_seq += "C"
             prev_cons="ng"
-            skip=True
+            continue
         elif prev_cons and char in vowels:
-            cv_seq += "CV"
-            prev_cons = None
+            cv_seq +="V"
+        elif prev_cons and prev_cons + char in consonant_clusters:
+            cv_seq +="CC"
+            prev_cons=None
+        elif char in consonants:
+            cv_seq +="C"
+            prev_cons=char
         elif char in vowels:
-            cv_seq += "V"
-        elif prev_cons and prev_cons+char in consonant_clusters:
-            cv_seq += "CC"
-            prev_cons = None
-        elif prev_cons:
-            cv_seq += "C"
-            prev_cons = char
-        else:
-            prev_cons = char
-    
-    if prev_cons and prev_cons!="ng":
-        cv_seq += "C"
-    
+            cv_seq +="V"
+            prev_cons=None
+        
     return cv_seq
 
 def get_syllable_sequence(word):
@@ -54,6 +45,8 @@ def get_syllable_sequence(word):
         syl_seq = syl_seq.replace("VV","V-V")
     while "VCVC" in syl_seq:
         syl_seq = syl_seq.replace("VCVC","V-CVC")
+    while "VVC" in syl_seq:
+        syl_seq = syl_seq.replace("VVC","V-VC")
     return syl_seq
 
 
