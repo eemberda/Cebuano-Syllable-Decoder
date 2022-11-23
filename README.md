@@ -34,5 +34,5 @@ Output:
 
 
 ## References
-
-* https://www.youtube.com/watch?v=ZULS0evRLHg
+* M. V. R. Bunye and E. P. Yap, Cebuano Grammar Notes. University of Hawai‘i Press, 1971. [Online]. Available: https://scholarspace.manoa.hawaii.edu/server/api/core/bitstreams/75449514-a5eb-487a-aa6b-7778680179e8/content
+* Computational Linguistics @ Illinois. Syllable Script in Python, 2017. Available: https://www.youtube.com/watch?v=ZULS0evRLHg
