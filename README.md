@@ -6,38 +6,32 @@ Cebuano Syllable Decoder
 * inside the folder run `python setup.py install`
 
 ## Requirements
-* `python>=2.7`
+* `python>=3.7`
 
 ## Functions
 * get_syllables(word)
-   - Accepts a Cebuano word and returns the syllables of the word
-   - Default Output: List of syllables
-   - Ex. get_syllables("nangaon")
+   - Accepts a Cebuano word and returns the syllables of the word, and the sequence of Consonants and Vowels
+   - Default Output: List of syllables and Sequence of Consonants and Vowels
+   - Ex. 
+      ``` 
+         syllabledecoder.get_syllables("tinabangay")   
+         [['ti', 'na', 'ba', 'ngay'], ['CV', 'CV', 'CV', 'CVC']]
       ```
-        ['na', 'nga', 'on']
       ```
-* get_syllable_sequence(word)
-   - Accepts a Cebuano word and returns the syllable sequence of the word
-   - Default Output: Syllable sequence of the word
-   - Ex. get_syllable_sequence("nangaon")
+         syllabledecoder.get_syllables("mag-tinabangay") 
+         [['mag', 'ti', 'na', 'ba', 'ngay'], ['CVC', 'CV', 'CV', 'CV', 'CVC']]      
       ```
-        'CV-CV-VC'
-      ```   
 ## How to Use
 ```
 from cebsyldec import syllabledecoder
 
-syllabledecoder.get_syllables("nangaon")
+syllabledecoder.get_syllables("mangaon")        
+
+```
 
 Output: 
-   ['na', 'nga', 'on']
+   [['ma', 'nga', 'on'], ['CV', 'CV', 'VC']]
 
-
-syllabledecoder.get_syllable_sequence("nangaon")
-
-Output:
-   'CV + V + CVC'
-```
 
 ## References
 
