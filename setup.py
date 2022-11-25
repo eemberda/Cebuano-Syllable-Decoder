@@ -2,9 +2,9 @@ from distutils.core import setup
 
 
 setup(
-  name = 'cebsyllabicator',
-  packages = ['cebsyllabicator'],
-  version = '1.0',
+  name = 'cebsyldec',
+  packages = ['cebsyldec'],
+  version = '0.0.3',
   description = "A Cebuano Syllabicator",
   author = 'Eric John Emberda',
   author_email = 'eric.emberda@gmail.com',
