@@ -1,5 +1,6 @@
 # Cebuano-Syllable-Decoder
-Cebuano Syllable Decoder
+Cebuano Syllable Decoder / Cebuano Syllabification
+Accepts a Cebuano word and breaks it down into syllables
 
 ## Installation
 * `pip install cebsyldec` or
