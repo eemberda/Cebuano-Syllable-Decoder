@@ -1,8 +1,8 @@
 def get_CV_sequence(word):
     word=word.lower()
     vowels=["a","e","i","o","u"]
-    consonants=["p", "t", "k", "b", "d", "g", "m", "n", "ng", "s", "h", "l", "r","w","y"]
-    consonant_clusters=["pw", "py", "pr", "pl", "tw", "ty", "tr", "ts", "kw","ky","kr","kl","bw","by","br","bl","dw","dy","dr","gw","gr","mw","my","nw","ny","sw","sy","hw"]
+    consonants=["p", "t", "k", "b", "d", "g", "m", "n", "ng", "s", "h", "l", "r","w","y","c"]
+    consonant_clusters=["pw", "py", "pr", "pl", "tw", "ty", "tr", "ts", "kw","ky","kr","kl","bw","by","br","bl","dw","dy","dr","gw","gr","mw","my","nw","ny","sw","sy","hw","ch"]
     
     prev_cons=None
     cv_seq=""
